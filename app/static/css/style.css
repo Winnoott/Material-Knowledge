@@ -1,0 +1,959 @@
+/* Custom styles for the Material Knowledge App */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Background pattern overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="2"/></g></svg>') repeat;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Main content area */
+main.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Navigation improvements */
+.navbar {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 4px;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Card improvements */
+.card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Material cards styling */
+.card-img-top {
+    transition: all 0.4s ease;
+    border-radius: 0;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* Header styling */
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none;
+    color: white !important;
+    padding: 1.5rem;
+}
+
+.card-header.bg-success {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%) !important;
+}
+
+.card-header.bg-info {
+    background: linear-gradient(135deg, #3498db 0%, #85c1e9 100%) !important;
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Supplier entry styling */
+.supplier-entry {
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.supplier-entry:hover {
+    background-color: #e9ecef;
+}
+
+.supplier-entry.border-success {
+    background-color: #f8fff9;
+    border-color: #28a745 !important;
+}
+
+/* Alert improvements */
+.alert {
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0a3622;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #58151c;
+}
+
+/* Button improvements */
+.btn {
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #4e9a29 0%, #90d4a8 100%);
+}
+
+.btn-outline-primary {
+    border: 2px solid #667eea;
+    color: #667eea;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: white;
+}
+
+/* Card title enhancements */
+.card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Material type badges */
+.badge.bg-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%) !important;
+}
+
+.badge.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%) !important;
+}
+
+/* Supplier card enhancements */
+.supplier-entry {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.supplier-entry:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-color: rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+.supplier-entry.border-success {
+    background: linear-gradient(135deg, rgba(86, 171, 47, 0.05) 0%, rgba(168, 230, 207, 0.05) 100%);
+    border-color: #56ab2f !important;
+}
+
+/* Price highlighting */
+.text-success {
+    color: #56ab2f !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Badge styling */
+.badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+/* Testing section */
+.test-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+.test-card h6 {
+    color: #fff;
+}
+
+/* Modal improvements */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: #6c757d;
+}
+
+/* Section headers */
+.border-bottom {
+    border-color: #e9ecef !important;
+}
+
+/* Enhanced statistics and info cards */
+.info-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border-color: rgba(102, 126, 234, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+/* Material detail page enhancements */
+.material-stats {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Testing data cards */
+.test-result-card {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(133, 193, 233, 0.1) 100%);
+    border: 2px solid rgba(52, 152, 219, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.test-result-card:hover {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(133, 193, 233, 0.15) 100%);
+    border-color: rgba(52, 152, 219, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+}
+
+/* Empty state styling */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+/* Page header styling */
+.page-header {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.page-header h1, .page-header h2 {
+    color: #495057;
+    font-weight: 700;
+}
+
+/* Form section headers */
+.form-section {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #667eea;
+}
+
+.form-section h5 {
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Quick action sidebar */
+.quick-actions {
+    position: sticky;
+    top: 2rem;
+}
+
+/* Hover effects for icons */
+.bi {
+    transition: all 0.3s ease;
+}
+
+.btn:hover .bi,
+.nav-link:hover .bi {
+    transform: scale(1.2);
+}
+
+/* Material cards spacing */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure consistent card heights in grid */
+.row .card {
+    height: 100%;
+}
+
+/* Custom select styling */
+.form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Animated loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success message styling */
+.success-message {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Error message styling */
+.error-message {
+    background: linear-gradient(135deg, #e74c3c 0%, #f1c0c0 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Floating action button */
+.fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+/* === SUPPLIER & TEST CARDS STYLING === */
+
+/* Supplier Cards */
+.supplier-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.supplier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: #28a745;
+}
+
+.supplier-card.primary-supplier {
+    border-color: #28a745;
+    background: linear-gradient(145deg, #f8fff9 0%, #ffffff 100%);
+}
+
+.supplier-card .card-title {
+    color: #495057;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Test Card Styles */
+.test-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.test-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: #17a2b8;
+}
+
+.test-card .card-title {
+    color: #17a2b8;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Info Grid Styles */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item i {
+    color: #6c757d;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.info-item span {
+    color: #495057;
+    font-size: 14px;
+    flex: 1;
+}
+
+.info-item.notes span {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Compact card styling */
+.supplier-card .card-body,
+.test-card .card-body {
+    padding: 1rem;
+}
+
+/* Badge styling for suppliers */
+.supplier-card .badge {
+    font-size: 0.7rem;
+    padding: 0.25em 0.5em;
+}
+
+/* Date styling for tests */
+.test-card small {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* Make cards more compact */
+.col-lg-6.mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+/* Navigation buttons */
+.page-navigation {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.nav-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.nav-btn.btn-outline-primary:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.nav-btn.btn-outline-success:hover {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+/* Small card styles for suppliers and tests */
+.supplier-small-card, .test-small-card {
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 120px;
+}
+
+.supplier-small-card:hover, .test-small-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.supplier-small-card.border-success {
+    border-color: #28a745 !important;
+    border-width: 2px;
+    background-color: #f8fff9;
+}
+
+.supplier-small-card .card-title, .test-small-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.supplier-small-card .badge, .test-small-card .badge {
+    font-size: 0.7rem;
+    padding: 0.25em 0.5em;
+}
+
+.supplier-small-card i, .test-small-card i {
+    opacity: 0.7;
+}
+
+.supplier-small-card .text-success {
+    color: #28a745 !important;
+    font-weight: 600;
+}
+
+.test-small-card .text-info {
+    color: #17a2b8 !important;
+    font-weight: 600;
+}
+
+/* Section headers */
+.text-success, .text-info {
+    font-weight: 700;
+}
+
+/* Navigation card */
+.card .btn.w-100 {
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .supplier-card, .test-card {
+        margin-bottom: 16px;
+    }
+    
+    .info-item {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .info-item i {
+        font-size: 14px;
+    }
+    
+    .info-item span {
+        font-size: 13px;
+    }
+    
+    .nav-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Loading animation */
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Form validation feedback improvements */
+.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.invalid-feedback {
+    display: block !important;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Modal improvements */
+.modal-dialog {
+    max-width: 600px;
+}
+
+.modal-header {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.modal-footer {
+    border-top: 2px solid #dee2e6;
+}
+
+/* Button loading state */
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Card edit dropdown styling */
+.supplier-small-card .dropdown-toggle,
+.test-small-card .dropdown-toggle {
+    border: 1px solid #dee2e6 !important;
+    background: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    color: #6c757d !important;
+    border-radius: 4px !important;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.supplier-small-card .dropdown-toggle:hover,
+.test-small-card .dropdown-toggle:hover,
+.supplier-small-card .dropdown-toggle:focus,
+.test-small-card .dropdown-toggle:focus {
+    background-color: #f8f9fa !important;
+    color: #495057 !important;
+    border-color: #adb5bd !important;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.supplier-small-card .dropdown-toggle::after,
+.test-small-card .dropdown-toggle::after {
+    display: none;
+}
+
+.supplier-small-card:hover .dropdown-toggle,
+.test-small-card:hover .dropdown-toggle {
+    opacity: 1;
+    visibility: visible;
+}
+
+.supplier-small-card .dropdown-menu,
+.test-small-card .dropdown-menu {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 140px;
+    border-radius: 6px;
+}
+
+.supplier-small-card .dropdown-item,
+.test-small-card .dropdown-item {
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+}
+
+.supplier-small-card .dropdown-item:hover,
+.test-small-card .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.supplier-small-card .dropdown-item.text-danger:hover,
+.test-small-card .dropdown-item.text-danger:hover {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Make sure the three-dots icon is visible */
+.bi-three-dots {
+    font-size: 0.9rem !important;
+    font-weight: bold;
+}
+
+/* Edit modal improvements */
+.modal-dialog {
+    max-width: 500px;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Card hover effects for better UX */
+.supplier-small-card:hover,
+.test-small-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Card overlay edit buttons */
+.supplier-small-card .position-absolute,
+.test-small-card .position-absolute {
+    opacity: 1 !important; /* Always visible now */
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.supplier-small-card:hover .position-absolute,
+.test-small-card:hover .position-absolute {
+    opacity: 1;
+}
+
+.supplier-small-card .btn-group .btn,
+.test-small-card .btn-group .btn {
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(2px);
+}
+
+.supplier-small-card .btn-group .btn:first-child,
+.test-small-card .btn-group .btn:first-child {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    margin-right: 2px;
+}
+
+.supplier-small-card .btn-group .btn:last-child,
+.test-small-card .btn-group .btn:last-child {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+/* Hover effects for better visibility */
+.supplier-small-card .btn-primary:hover,
+.test-small-card .btn-info:hover {
+    transform: scale(1.1);
+    background-color: #0d6efd !important;
+}
+
+.supplier-small-card .btn-danger:hover,
+.test-small-card .btn-danger:hover {
+    transform: scale(1.1);
+    background-color: #dc3545 !important;
+}
+
+/* Make sure cards have enough padding for overlay buttons */
+.supplier-small-card .card-body,
+.test-small-card .card-body {
+    position: relative;
+    min-height: 120px;
+    padding-top: 3rem !important; /* Add more top padding for buttons */
+}
+
+/* Complete Bootstrap Modal Fix - Simple approach */
+.modal {
+    z-index: 1055 !important;
+    display: none !important;
+}
+
+.modal.show {
+    display: block !important;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+
+/* SIMPLE MODAL BACKDROP FIX - No CSS variables */
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.5) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1050 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.modal-backdrop.show {
+    opacity: 1 !important;
+}
+
+.modal {
+    z-index: 1055 !important;
+}
+
+/* Alert z-index to appear above modals when needed */
+.alert.position-fixed {
+    z-index: 1080 !important;
+}
+
+/* Enhanced edit button visibility */
+.edit-supplier-btn, .edit-test-btn,
+.delete-supplier-btn, .delete-test-btn {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.5rem !important;
+    line-height: 1 !important;
+    border-radius: 4px !important;
+    margin: 1px !important;
+    min-width: 28px !important;
+    height: 28px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.edit-supplier-btn:hover, .edit-test-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.delete-supplier-btn:hover, .delete-test-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Position adjustments for better visibility */
+.supplier-small-card .position-absolute.top-0.end-0,
+.test-small-card .position-absolute.top-0.end-0 {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    padding: 0 !important;
+}
